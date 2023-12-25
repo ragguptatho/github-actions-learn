@@ -1,0 +1,12 @@
+name: first Workflow 
+
+on: 
+  - push
+
+jobs:
+  simple-job:
+    runs-on: self-hosted
+    steps:
+      - run: echo 'Hello World'
+      - run: |
+          echo 'Hi There'
