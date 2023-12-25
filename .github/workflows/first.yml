@@ -10,3 +10,13 @@ jobs:
       - run: echo 'Hello World'
       - run: |
           echo 'Hi There'
+  parallel-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Hi There'
+  serial-job:
+    runs-on: windows-latest
+    needs:
+      - simple-job
+    steps:
+      - run: Write-Output "Hi There"
